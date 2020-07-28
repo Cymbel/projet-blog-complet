@@ -1,0 +1,15 @@
+<li [ngClass]="{'list-group-item': true,
+                'list-group-item-success': postLoveIts > 0,
+                'list-group-item-danger': postLoveIts < 0}">
+    <div class="d-flex justify-content-between">
+      <h4 [ngStyle]="{color: getColor()}">{{postTitle}}</h4>
+      <div class="col-xs-4">{{postCreatedAt | date: 'dd/MM/yyyy, h:mm a'}}</div>
+    </div>
+    <p>{{postContent}}</p>
+    <div class="d-flex bd-highlight mb-3">
+    <button class="p-2 bd-highlight btn btn-success" (click)="incrementCompteur()">Love it!</button> &nbsp;
+    <button class="p-2 bd-highlight btn btn-danger" (click)="decrementCompteur()">Don't love it!</button>
+    <button class="ml-auto p-2 bd-highlight btn btn-danger" (click)="onDeletePost(book)">Supprimer post</button>
+  </div>
+</li>
+
