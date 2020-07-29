@@ -11,7 +11,7 @@ export class ItemComponent implements OnInit {
 
   @Input() postTitle: string;
   @Input() postContent: string;
-  @Input() postLoveIts = 0;
+  @Input() postLoveIts: number;
   @Input() postCreatedAt: Date;
   @Input() post: Post;
 
@@ -22,9 +22,13 @@ export class ItemComponent implements OnInit {
 
   incrementCompteur() {
     this.postLoveIts++;
+    this.post.loveIts = this.postLoveIts;
+    this.postService.savePosts();
   }
   decrementCompteur() {
     this.postLoveIts--;
+    this.post.loveIts = this.postLoveIts;
+    this.postService.savePosts();
   }
 
   getColor() {

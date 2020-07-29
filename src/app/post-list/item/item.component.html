@@ -7,9 +7,9 @@
     </div>
     <p>{{postContent}}</p>
     <div class="d-flex bd-highlight mb-3">
-    <button class="p-2 bd-highlight btn btn-success" (click)="incrementCompteur()">Love it!</button> &nbsp;
-    <button class="p-2 bd-highlight btn btn-danger" (click)="decrementCompteur()">Don't love it!</button>
-    <button class="ml-auto p-2 bd-highlight btn btn-danger" (click)="onDeletePost(book)">Supprimer post</button>
+    <button class="p-2 bd-highlight btn btn-success" (click)="incrementCompteur(post)">Love it!</button> &nbsp;
+    <button class="p-2 bd-highlight btn btn-danger" (click)="decrementCompteur(post)">Don't love it!</button>
+    <button class="ml-auto p-2 bd-highlight btn btn-danger" (click)="onDeletePost(post)">Supprimer post</button>
   </div>
 </li>
 
